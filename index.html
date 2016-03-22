@@ -3,10 +3,10 @@
 <html lang="en">
 <head>
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 
 <link href="indexstyle.css" rel="stylesheet" type="text/css">
 
@@ -35,6 +35,10 @@
   
   <!-- google analytics starts-->
 <script>
+	var host = "suwannar.github.io";
+	if ((host == window.location.host) && (window.location.protocol != "https:"))
+	    window.location.protocol = "https";
+
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -80,9 +84,9 @@
     
 <div id="social"> <!-- facebook and twitter share button -->
 
-<div class="fb-share-button" data-href="http://OnDisplay.media" data-layout="button_count"></div>
+<div class="fb-share-button" data-href="https://suwannar.github.io/OnDisplay" data-layout="button_count"></div>
   
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://OnDisplay.media" data-text="OnDisplay examines our obsession with sharing." data-via="yaowsuwanna" data-hashtags="selfie">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://suwannar.github.io/OnDisplay" data-text="OnDisplay examines our obsession with sharing." data-via="yaowsuwanna" data-hashtags="selfie">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 </div>
@@ -90,7 +94,7 @@
 
     
      
-    <div id="mask"> <a href="http://ondisplay.media/enter.html" onClick="take_snapshot();"> 
+    <div id="mask"> <a href="https://suwannar.github.io/OnDisplay/enter.html" onClick="take_snapshot();"> 
     <input class="maskimg" type="image" src="images/mask.gif" name="saveForm" id="self" value="Take Snapshot" onClick="take_snapshot();"  />
    </a> </div>
 
@@ -101,7 +105,7 @@
 	<div id="my_camera" style="overflow:hidden; width:1441px; height:700px;" ></div>
 	
 	<!-- First, include the Webcam.js JavaScript Library -->
-	<script type="text/javascript" src="../webcam.js"></script>
+	<script type="text/javascript" src="./webcam.js"></script>
 	
 	<!-- Configure a few settings and attach camera -->
 	<script language="JavaScript">
