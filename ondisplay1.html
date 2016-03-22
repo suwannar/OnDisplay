@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OnDisplay1</title>
+</head>
+
+
+<body onload=display_ct();>
+
+
+ <!--
+ <audio src="clock-ticking-4.mp3" controls autoplay loop=”true” hidden="hidden" ></audio>
+-->
+
+
+
+</body>
+
+
+
+</html>
+
+
+
+  <!--  CLOCK / TIME TIMETIME starts here -->    
+<span id='ct' ></span>
+<script type="text/javascript"> 
+function display_c(){
+var refresh=500; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
+
+function display_ct() {
+var strcount
+var x = new Date()
+var x1=x.getMonth() +1 + "/" + 
+x.getDate() + "/" + 
+x.getFullYear(); 
+x1 = x1 + " - " + 
+x.getHours( )+ ":" + 
+x.getMinutes() + ":" + 
+x.getSeconds() ;
+document.getElementById('ct').innerHTML = x1;
+
+tt=display_c();
+
+document.getElementById('ct').style.fontSize='30px';
+document.getElementById('ct').style.fontFamily='Source Sans Pro';
+document.getElementById('ct').style.color='black';
+}
+</script>
+<!--  CLOCK / TIME TIMETIME ends here -->

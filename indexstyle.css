@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	width:100%;
+	height:720px;
+	margin:0;
+	font-family: 'Inconsolata';
+	background-color:black;
+}
+
+#top, #bottom, #left, #right {
+	z-index:99;
+	background: #0033FF;
+	position: fixed;
+	z-index:300
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 12px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+		
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 12px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
+		
+	
+	
+ul {list-style-type: none;
+	font-family: 'Inconsolata';
+	font-size:20px;
+	color:#0033FF;
+	z-index:500 !important;
+	margin: 0;
+	}
+	
+	.aboutnav{ 
+	float:left; 
+	margin-top:25px;
+	z-index:500 !important;
+	position:fixed;
+	}
+	
+	.enternav{
+	float:right;
+	padding-right:130px;
+ 
+	z-index:500 !important;
+	position:fixed;
+	}
+	
+	li.enternav a {
+  color:#00FF00;
+  text-decoration:none;
+  font-weight:600;
+}
+
+li.aboutnav a {
+  color:#00FF00;
+  text-decoration:none;
+  font-weight:600;
+}
+
+::selection { 
+background: transparent;
+color:black;
+}
+
+
+
+
+#mask{ position:absolute;
+z-index:100;
+	left: 0px;
+	margin:auto 19%;
+	-webkit-filter: blur(4px);
+	 opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+img{
+	position:absolute;
+	height:auto;
+	width:100%;
+	z-index:100;
+	left: 0px;
+	margin:auto;
+	}
+	
+	
+#results {width:auto;
+margin:0px !important;
+ 
+}
+	
+	
+	#my_camera {
+	position:fixed;
+	float:left;
+    width:100%;
+    background-color:black;
+	margin: 0px;
+	z-index:-100;
+	height:720px;
+}
+
+	
+.maskimg{
+	height:100%;
+	width:auto;
+	margin-left:18%;
+	margin-right:;
+	margin-top:50px;
+	position:fixed;
+	}
+	
+	
+	
+	form { }
+	
+	form > input { margin-right: 0px; }
+	
+	
+#social{padding-top:50%;
+padding-left:85%;
+position:fixed;
+ }
+ 
+.btn-o{
+ margin-top:3px;
+ }
+
+
+@media only screen and (max-width:1460px){
+.maskimg{
+	height:650px;
+	width:auto;
+	margin-left:18%;
+	position:fixed;
+	}
+	
+	#mask{ position:absolute;
+z-index:100;
+	left: 0px;
+	margin:auto 15%;
+	-webkit-filter: blur(4px);
+	 opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+
+}
+	
+	
+	
+	

@@ -1,0 +1,166 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
+<link href="indexstyle.css" rel="stylesheet" type="text/css">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="People give up privacy for attention and admiration.">
+  <meta name="author" content="Suwanna Ruayrinsaowarot">
+  
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon.ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon.ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon.ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon.ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon.ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon.ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon.ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon.ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon.ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon.ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon.ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon.ico/favicon-16x16.png">
+<link rel="manifest" href="favicon.ico/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="favicon.ico/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  
+  <!-- google analytics starts-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62492278-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- google analytics ends-->
+
+
+
+	<title>OnDisplay</title>
+	
+</head>
+<body>
+
+   <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+  <div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+
+ 
+<audio src="OnDisplay.m4a" controls autoplay loop=”true” hidden="hidden"></audio>
+ 
+  <ul>
+ <li class='aboutnav'><a href="about.html"></a></li>
+ <li class='enternav'><a href="enter.html"></a></li> 
+    </ul>
+    
+<div id="social"> <!-- facebook and twitter share button -->
+
+<div class="fb-share-button" data-href="http://OnDisplay.media" data-layout="button_count"></div>
+  
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://OnDisplay.media" data-text="OnDisplay examines our obsession with sharing." data-via="yaowsuwanna" data-hashtags="selfie">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+</div>
+  
+
+    
+     
+    <div id="mask"> <a href="http://ondisplay.media/enter.html" onClick="take_snapshot();"> 
+    <input class="maskimg" type="image" src="images/mask.gif" name="saveForm" id="self" value="Take Snapshot" onClick="take_snapshot();"  />
+   </a> </div>
+
+
+	<div id="results"> </div>
+	
+	
+	<div id="my_camera" style="overflow:hidden; width:1441px; height:700px;" ></div>
+	
+	<!-- First, include the Webcam.js JavaScript Library -->
+	<script type="text/javascript" src="../webcam.js"></script>
+	
+	<!-- Configure a few settings and attach camera -->
+	<script language="JavaScript">
+		Webcam.set({
+			// live preview size
+			width: window.screen.width,
+			height: window.screen.height,
+			
+			// device capture size
+			dest_width: 935,
+			dest_height: 525,
+			
+			// final cropped size
+			crop_width: 935,
+			crop_height: 525,
+			
+			// format and quality
+			image_format: 'jpeg',
+			jpeg_quality: 100
+		});
+		Webcam.attach( '#my_camera' );
+	</script>
+	
+	<!-- A button for taking snaps 
+	<form>
+		<input type=button value="Take Snapshot" onClick="take_snapshot()">
+	</form>
+	-->
+	
+	
+	
+	<!-- Code to handle taking the snapshot and displaying it locally -->
+	<script language="JavaScript">
+	
+		// preload shutter audio clip
+		var shutter = new Audio();
+		shutter.autoplay = false;
+		shutter.src = navigator.userAgent.match(/Firefox/) ? 'shutter.ogg' : 'shutter.mp3';
+		
+		function take_snapshot() {
+			// play sound effect
+			shutter.play();
+			
+			// take snapshot and get image data
+			Webcam.snap( function(data_uri) {
+				// display results in page
+			 	window.localStorage.setItem("your_selfie", data_uri);
+				document.getElementById('results').innerHTML = 
+					'<h2> </h2>' + 
+					'<img src="'+data_uri+'"/>';
+			} );
+			}
+			
+	</script>
+	
+	
+
+
+
+	
+</body>
+</html>
