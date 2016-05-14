@@ -267,16 +267,21 @@ document.getElementById('ct').style.color='black';
 			window.setTimeout(function() {
 				window_list.push(window.open("ondisplay3.html", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=450, left=1100, width=300, height=300"));
 			}, 26000);
-
-			window.setTimeout(function() {
-				window_list.push(window.open("yourself.html", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=170, left=270, width=925, height=525"));
-			}, 35000);
-			
 			
 	  		window.setTimeout(function() {
-				for(var i = 0;i < window_list.length; i++)
+				for(var i = 0;i < window_list.length; i++){
 					window_list[i].close();
+				}
 			},33000); 
+
+			window.setTimeout(function() {
+				var yourSelfWindow = window.open("yourself.html", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=170, left=270, width=925, height=525");
+
+				window.setTimeout(function(){
+					yourSelfWindow.close();
+				}, 15000);
+				
+			}, 35000);
 					
 					
 					
